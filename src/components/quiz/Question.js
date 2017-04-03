@@ -25,7 +25,7 @@ class Question extends Component{
             question.choices.map(choice => {
               return(
                 <li className="list-group-item" key={choice.id}>
-                  {choice.id} <input type="radio" onChange={this.onChange.bind(this)} name={question.id} value={choice.id} /> {choice.text}
+                  {choice.id} <input type="radio" onChange={this.onChange.bind(this)} name={question.id} value={choice.id} id={choice.id} /> <label htmlFor={choice.id}>{choice.text}</label>
                 </li>
                 )
               })

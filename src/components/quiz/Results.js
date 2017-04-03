@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Solution from './Solution';
 
 class Results extends Component{
 
@@ -12,12 +13,22 @@ class Results extends Component{
       var message = 'Not Good!';
     }
     return(
-      <div className="well">
-        <h4> You Got {this.props.score} out of {this.props.questions.length} Correct </h4>
-        <h1>{percent}% - {message}</h1>
-        <hr />
-        <a href="/app">Take again</a>
+      <div>
+        <div className="well">
+          <h4> You Got {this.props.score} out of {this.props.questions.length} Correct </h4>
+          <h1>{percent}% - {message}</h1>
+          <hr />
+          <a href="#solutions" className="btn btn-default btn-success">Check Solutions</a> <a href="/app" className="btn btn-default">Take again</a>
+        </div>
+        <div id="solutions">
+          {
+            this.props.questions.map(question => {
+                  return <Solution question={question} key={question.id} {...this.props} />
+            })
+          }
+        </div>
       </div>
+
     )
   }
 }

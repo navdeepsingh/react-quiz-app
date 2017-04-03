@@ -1,0 +1,22 @@
+header{
+  background-color: #D8DC1F;
+  text-shadow: 2px 2px #BFD02B;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.list-group-item label{
+  font-weight: normal;
+}
+.btn-success{
+  background-color: #d8dc1f;
+  border: 1px solid #d8dc1f;
+  color: #000;
+}
+.btn-success:hover{
+  background-color: #B0B51A;
+  border: 1px solid #B0B51A;
+}
+#solutions {
+    margin-bottom: 200px;
+    margin-top: 250px;
+}
